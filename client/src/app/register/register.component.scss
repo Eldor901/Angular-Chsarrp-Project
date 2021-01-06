@@ -1,0 +1,55 @@
+$text-link-color: gray;
+$text-primary: #3847a0;
+
+:host {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0px;
+}
+
+.mat-form-field {
+  width: 100%;
+  min-width: 400px;
+}
+
+mat-card-title,
+mat-card-content {
+  display: flex;
+  justify-content: center;
+}
+
+.error {
+  padding: 16px;
+  width: 300px;
+  color: white;
+  background-color: red;
+}
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttonPadding {
+  padding-left: 5px;
+}
+
+.accountLogin {
+  color: $text-link-color;
+}
+
+.login {
+  font-size: 20px;
+  color: $text-primary;
+  cursor: pointer;
+}
+
+::ng-deep .red-snackbar {
+  background: darkred;
+  color: white;
+}
+
+::ng-deep .green-snackbar {
+  background: darkgreen;
+  color: white;
+}

@@ -1,0 +1,28 @@
+<div>
+  <mat-drawer-container class="example-container">
+    <mat-drawer mode="side" class="example-sidenav" #drawer>
+      <h1 class="text-center logo">Logo</h1>
+      <div class="nav_container">
+        <p class="nav_text">All cousins</p>
+        <p class="nav_text">Create your burger</p>
+        <p class="nav_text">cart</p>
+      </div>
+    </mat-drawer>
+    <mat-drawer-content>
+      <p>
+        <mat-toolbar color="primary">
+          <button
+            mat-icon-button
+            (click)="drawer.toggle()"
+            aria-label="Example icon-button with menu icon"
+          >
+            <mat-icon>menu</mat-icon>
+          </button>
+          <span>My App</span>
+          <span class="example-spacer"></span>
+        </mat-toolbar>
+      </p>
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>

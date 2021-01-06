@@ -1,0 +1,45 @@
+$text-primary: #3847a0;
+
+.example-container {
+  min-height: 900px;
+}
+
+.example-icon {
+  padding: 0 14px;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.example-sidenav {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  background-color: $text-primary;
+  justify-content: center;
+}
+
+.nav_container {
+  width: 220px;
+  color: white;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.container-nav {
+  height: 30px;
+}
+
+.nav_text {
+  margin-bottom: 20px;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.logo {
+  text-align: center;
+  color: white;
+  height: 60px;
+  margin-bottom: 0;
+}

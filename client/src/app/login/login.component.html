@@ -1,0 +1,47 @@
+<div>
+  <mat-card>
+    <mat-card-title>Login</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="form" (ngSubmit)="login()">
+        <p>
+          <mat-form-field>
+            <input
+              type="text"
+              required
+              matInput
+              placeholder="Username"
+              formControlName="username"
+            />
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field>
+            <input
+              type="password"
+              required
+              matInput
+              placeholder="Password should contain at least 6"
+              formControlName="password"
+            />
+          </mat-form-field>
+        </p>
+
+        <div class="button">
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            [disabled]="form.invalid"
+          >
+            Login
+          </button>
+        </div>
+      </form>
+    </mat-card-content>
+    <h1 class=".mat-subheading-1 accountLogin">
+      if you dont have an account
+      <a routerLink="/register" class="register">sign In</a>
+    </h1>
+  </mat-card>
+</div>

@@ -1,0 +1,55 @@
+<mat-card class="example-card">
+  <h1>Users Table</h1>
+  <mat-card-content>
+    <table class="fl-table">
+      <thead>
+      <tr>
+        <th>№</th>
+        <th>UserName</th>
+        <th>
+          <div>
+            Role <mat-icon class="filter_icon" [matMenuTriggerFor]="menu" #menuTrigger>filter_alt</mat-icon>
+          </div>
+        </th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let n of table; index as i">
+        <td> {{i + 1}} </td>
+        <td>{{n.username}} </td>
+        <td >
+        <div class="select">
+          <select name="slct" id="slct" (change)="changeRole($event.target.value, n.username)" *ngIf="n.role; else AllRoles">
+            <option  [selected]="n.role.name === 'ADMIN'" value="ADMIN">ADMIN</option>
+            <option  [selected]="n.role.name === 'CHIEF'" value="CHIEF">CHIEF</option>
+            <option  [selected]="n.role.name === 'WAITER'" value="WAITER">WAITER</option>
+            <option  [selected]="n.role.name === 'VISITOR'" value="VISITOR">VISITOR</option>
+          </select>
+
+          <ng-template #AllRoles>
+            <select name="slct" (change)="changeRole($event.target.value, n.username)" >
+                <option selected disabled>CHOOSE OPTION</option>
+                <option  value="ADMIN">ADMIN</option>
+                <option  value="CHIEF">CHIEF</option>
+                <option  value="WAITER">WAITER</option>
+                <option  value="VISITOR">VISITOR</option>
+            </select>
+          </ng-template>
+        </div>
+        </td>
+        <td><mat-icon (click)="openDialog(n.username)"  aria-hidden="false" aria-label="Example home icon" >delete</mat-icon></td>
+      </tr>
+      </tbody>
+    </table>
+  </mat-card-content>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="fillTable()">ALL</button>
+    <button mat-menu-item (click)="fillTable('ADMIN')">ADMIN</button>
+    <button mat-menu-item (click)="fillTable('CHIEF')">CHIEF</button>
+    <button mat-menu-item (click)="fillTable('WAITER')">WAITER</button>
+    <button mat-menu-item (click)="fillTable('VISITOR')">VISITOR</button>
+    <button mat-menu-item (click)="fillTable('NONE')">NO ROLES</button>
+  </mat-menu>
+</mat-card>
