@@ -8,9 +8,11 @@ namespace _.Data.Admin
     {
         Task<Cuisine> GetIdCousine(string name);
         Task<ProductCategory> GetIdProductCategory(string name);
-
         Task<Product> GetIdProduct(string name);
-        
         Task<IngridientCategory> GetIdIngridient(string name);
+
+        Task<Cuisine> DeleteCusine(int  id);
+
+        Task<Product> DeleteProduct(int id);
     }
 }

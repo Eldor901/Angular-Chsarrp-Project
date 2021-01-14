@@ -1,8 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using _.Data;
 using _.Data.Admin;
+using _.Dtos;
+using _.Dtos.AddActions;
 using _.Models;
+using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TempWeb.Models;
@@ -17,11 +21,13 @@ namespace _.Controllers
     {
         private IGenericActions _genericActions;
         private IReletionalActions _reletionalActions;
+        private readonly IMapper _mapper;
 
-        public Info(IGenericActions genericActions, IReletionalActions reletionalActions)
+        public Info(IGenericActions genericActions, IReletionalActions reletionalActions, IMapper mapper)
         {
             _genericActions = genericActions;
             _reletionalActions = reletionalActions;
+            _mapper = mapper;
         }
 
         [HttpGet("allProductCategories")]
@@ -40,16 +46,19 @@ namespace _.Controllers
         }
 
         [HttpGet("AllCategoryProductsOfCuisine/{cusineId}")]
-        public async Task<IActionResult> getProductsCuisine(int cusineId)
+        public async Task<IActionResult> getProductsCuisine(string cusineId)
         {
-       
+            
             var info =  await _reletionalActions.CuisineAllProductsInCategory(cusineId);
-            return Ok(info);
+
+            var infoToReturn = _mapper.Map<IEnumerable<ProductCategoryDto>>(info);;
+            
+            return Ok(infoToReturn);
         }
         
         
         [HttpGet("AllCategoryIngridientsOfProduct/{productId}")]
-        public async Task<IActionResult> getIngridientsProduct(int productId)
+        public async Task<IActionResult> getIngridientsProduct(string productId)
         {
        
             var info =  await _reletionalActions.ProductAllIngridentsInCategory(productId);

@@ -5,6 +5,7 @@ import { AdminComponent } from './admin.component';
 import { AdminGuard } from '../admin.guard';
 import {ContentComponent} from './pages/content/content.component';
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
+import {ProductsComponent} from './pages/products/products.component';
 
 const routesAdmin: Routes = [
   {
@@ -13,7 +14,8 @@ const routesAdmin: Routes = [
     canActivate: [AdminGuard],
     children: [
       { path: 'main', component: MainPageComponent },
-      { path: 'content', component: ContentComponent }
+      { path: 'content', component: ContentComponent },
+      { path: 'products/:id', component: ProductsComponent},
     ],
   },
 ];

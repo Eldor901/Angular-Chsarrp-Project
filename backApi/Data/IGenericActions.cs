@@ -8,5 +8,7 @@ namespace _.Data
     {
         Task<IEnumerable<T>> GetAll<T>() where T: class;
         Task<T> GetOneElement<T>(int id) where T : class;
+        
+        
     }
 }

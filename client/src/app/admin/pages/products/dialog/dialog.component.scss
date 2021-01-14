@@ -1,0 +1,43 @@
+.title
+{
+  text-align: center;
+}
+
+
+.actions
+{
+  display: block;
+  text-align: center;
+}
+
+
+.form
+{
+  display: block;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  margin-top: 20px;
+  background-color: #3847a0; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

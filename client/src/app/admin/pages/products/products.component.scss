@@ -1,0 +1,35 @@
+.icon_add_block {
+  margin-top: -15px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.icon_add{
+  font-size: 36px;
+}
+
+.icon_comment {
+  font-size: 36px;
+  position: absolute;
+  margin-left: 15px;
+}
+
+
+/* The heart of the matter */
+.testimonial-group > .row {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.testimonial-group > .row > .col-sm-4 {
+  display: inline-block;
+  float: none;
+}
+
+::-webkit-scrollbar {
+  height: 0px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+

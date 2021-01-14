@@ -237,6 +237,21 @@ namespace _.Controllers
             var json = JsonConvert.SerializeObject(status);
             return Ok(json);
         }
+
+        [HttpPut("deleteCusine/{id}")]
+        public async Task<IActionResult> deleteCusine(int id)
+        {
+            var cusine = await _getActions.DeleteCusine(id);
+            
+            return Ok(cusine);
+        }
+
+        [HttpPut("deleteProduct/{id}")]
+        public async Task<IActionResult> deleteProduct(int id)
+        {
+            var product = await _getActions.DeleteProduct(id);
+            return Ok(product);
+        }
         
         
         //

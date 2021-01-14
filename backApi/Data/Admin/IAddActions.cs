@@ -8,10 +8,8 @@ namespace _.Data.Admin
     {
         Task<Cuisine> AddCuisine(Cuisine cousine);
         Task<Product> AddProduct(Product product);
-
         Task<ProductCategory> AddProductCategory(ProductCategory productCategory);
         Task<Ingridient> AddIncrident(Ingridient ingridient);
-
         Task<IngridientCategory> AddIngridientCategory(IngridientCategory ingridientCategory);
 
     }

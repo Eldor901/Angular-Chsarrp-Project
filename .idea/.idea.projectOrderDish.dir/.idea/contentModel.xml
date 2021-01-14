@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\msi gf\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\msi gf\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_.19.00" t="ExcludeRecursive" />
+    <e p="D:\charpProj\projectOrderDish" t="IncludeFlat">
+      <e p="Api" t="IncludeRecursive">
+        <e p="..csproj" t="IncludeRecursive" />
+        <e p=".gitignore" t="Include" />
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="api.cs" t="Include" />
+          <e p="AuthController.cs" t="Include" />
+          <e p="PhotosController.cs" t="Include" />
+          <e p="UserController.cs" t="Include" />
+          <e p="WeatherForecastController.cs" t="Include" />
+        </e>
+        <e p="Data" t="Include">
+          <e p="AuthRepository.cs" t="Include" />
+          <e p="DatingRepository.cs" t="Include" />
+          <e p="IAuthRepository.cs" t="Include" />
+          <e p="IdatingRepository.cs" t="Include" />
+        </e>
+        <e p="Dtos" t="Include">
+          <e p="PhotoForCreatingDto.cs" t="Include" />
+          <e p="PhotosForDetailedDto.cs" t="Include" />
+          <e p="UserForDetailedDto.cs" t="Include" />
+          <e p="UserForListDto.cs" t="Include" />
+          <e p="UserLoginDto.cs" t="Include" />
+          <e p="UserRegisterDto.cs" t="Include" />
+        </e>
+        <e p="Helpers" t="Include">
+          <e p="AutoMapperProfiles.cs" t="Include" />
+          <e p="CloudanarySettings.cs" t="Include" />
+        </e>
+        <e p="Migrations" t="Include" />
+        <e p="Models" t="Include">
+          <e p="Cuisine.cs" t="Include" />
+          <e p="DataContext.cs" t="Include" />
+          <e p="ProductCart.cs" t="Include" />
+          <e p="Role.cs" t="Include" />
+          <e p="User.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="..AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="WeatherForecast.cs" t="Include" />
+      </e>
+      <e p="backApi" t="IncludeRecursive">
+        <e p="..csproj" t="IncludeRecursive" />
+        <e p=".gitignore" t="Include" />
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="admin" t="Include">
+            <e p="ActionsContrroller.cs" t="Include" />
+          </e>
+          <e p="AuthController.cs" t="Include" />
+          <e p="InfoController.cs" t="Include" />
+          <e p="UserController.cs" t="Include" />
+        </e>
+        <e p="Data" t="Include">
+          <e p="admin" t="Include">
+            <e p="AddActions.cs" t="Include" />
+            <e p="IAddActions.cs" t="Include" />
+            <e p="IUserRepository.cs" t="Include" />
+            <e p="UserRepository.cs" t="Include" />
+          </e>
+          <e p="AuthRepository.cs" t="Include" />
+          <e p="GenericActions.cs" t="Include" />
+          <e p="IAuthRepository.cs" t="Include" />
+          <e p="IGenericActions.cs" t="Include" />
+        </e>
+        <e p="Dtos" t="Include">
+          <e p="AddActions" t="Include">
+            <e p="addCusineDto.cs" t="Include" />
+            <e p="addIngridientCategoryDto.cs" t="Include" />
+            <e p="addIngridientDto.cs" t="Include" />
+            <e p="addProductCategoryDto.cs" t="Include" />
+            <e p="addProductDto.cs" t="Include" />
+          </e>
+          <e p="ChangeRoleDto.cs" t="Include" />
+          <e p="DeleteUserDto.cs" t="Include" />
+          <e p="UserDetailedDto.cs" t="Include" />
+          <e p="UserLoginDto.cs" t="Include" />
+          <e p="UserRegisterDto.cs" t="Include" />
+        </e>
+        <e p="Helpers" t="Include">
+          <e p="AutoMapperProfiles.cs" t="Include" />
+          <e p="CloudanarySettings.cs" t="Include" />
+          <e p="Status.cs" t="Include" />
+        </e>
+        <e p="Migrations" t="Include">
+          <e p="20201001213716_InitialMigrate3.cs" t="Include" />
+          <e p="20201001213716_InitialMigrate3.Designer.cs" t="Include" />
+          <e p="DataContextModelSnapshot.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="Cuisine.cs" t="Include" />
+          <e p="DataContext.cs" t="Include" />
+          <e p="Ingridient.cs" t="Include" />
+          <e p="IngridientCategory.cs" t="Include" />
+          <e p="Product.cs" t="Include" />
+          <e p="ProductCart.cs" t="Include" />
+          <e p="ProductCategory.cs" t="Include" />
+          <e p="Role.cs" t="Include" />
+          <e p="User.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="..AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="WeatherForecast.cs" t="Include" />
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

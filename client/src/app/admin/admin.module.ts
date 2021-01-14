@@ -12,7 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import {NzTableModule} from 'ng-zorro-antd/table';
-import {ContentComponent} from './pages/content/content.component';
+import {ContentComponent, DialogDeleteCusine} from './pages/content/content.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {AdminService} from './admin.service';
 import {AdminGuard} from '../admin.guard';
@@ -23,8 +23,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { DialogComponent } from './pages/content/dialog/dialog.component';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {DialogDeleteProduct, ProductsComponent} from './pages/products/products.component';
+import {DialogComponentProduct} from './pages/products/dialog/dialog.component';
+import {DialogProductComment} from './pages/products/dialogComment/dialog.component';
+
 @NgModule({
-  declarations: [AdminComponent, MainPageComponent, ContentComponent, DialogContentExampleDialog, DialogComponent],
+  declarations: [AdminComponent, MainPageComponent, ContentComponent, DialogContentExampleDialog, DialogComponent,
+    ProductsComponent,  DialogComponentProduct, DialogProductComment, DialogDeleteCusine, DialogDeleteProduct],
   imports: [
     CommonModule,
     BrowserModule,

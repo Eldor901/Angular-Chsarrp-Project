@@ -3,9 +3,8 @@
     <mat-drawer mode="side" class="example-sidenav" #drawer>
       <h1 class="text-center logo">Logo</h1>
       <div class="nav_container">
-        <p class="nav_text">All cousins</p>
-        <p class="nav_text">Create your burger</p>
-        <p class="nav_text">cart</p>
+        <p class="nav_text" routerLink="showcousine">All cousins</p>
+        <p class="nav_text" routerLink="createProduct">Create your burger</p>
       </div>
     </mat-drawer>
     <mat-drawer-content>
@@ -20,6 +19,14 @@
           </button>
           <span>My App</span>
           <span class="example-spacer"></span>
+          <button
+            mat-icon-button
+            class="example-icon"
+            (click)="goToHomePage()"
+            aria-label="Example icon-button with menu icon"
+          >
+            <mat-icon class="pointer">exit_to_app</mat-icon>
+          </button>
         </mat-toolbar>
       </p>
       <router-outlet></router-outlet>

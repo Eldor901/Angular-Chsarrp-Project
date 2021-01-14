@@ -1,0 +1,17 @@
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+<h1 mat-dialog-title class="title">Add Product Category</h1>
+<div mat-dialog-content>
+      <mat-form-field appearance="legacy" class="form">
+        <mat-label>Product Category</mat-label>
+        <label>
+          <input matInput placeholder="fill Form" formControlName="name">
+        </label>
+        <mat-hint>Drinks</mat-hint>
+      </mat-form-field>
+</div>
+<div mat-dialog-actions class="actions">
+  <button mat-button (click)="onNoClick()">No</button>
+  <button type="submit"  mat-button [disabled]="form.invalid" >Yes</button>
+</div>
+</form>

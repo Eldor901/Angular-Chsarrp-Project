@@ -7,36 +7,24 @@
       </div>
     </mat-grid-tile>
   </mat-grid-list>
-  <mat-card-content>
-    <mat-grid-list cols="4" rowHeight="2:1">
-      <mat-grid-tile>
-        <mat-card class="example-card">
-          <mat-card-content>
-            one
-          </mat-card-content>
-        </mat-card>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <mat-card class="example-card">
-          <mat-card-content>
-            one
-          </mat-card-content>
-        </mat-card>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <mat-card class="example-card">
-          <mat-card-content>
-            one
-          </mat-card-content>
-        </mat-card>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <mat-card class="example-card">
-          <mat-card-content>
-            one
-          </mat-card-content>
-        </mat-card>
-      </mat-grid-tile>
-    </mat-grid-list>
+  <mat-card-content class="container">
+      <div class="row">
+<!--        <div *ngFor="let cus of contentCus">-->
+<!--          <div class="col-sm-3">-->
+<!--            111-->
+<!--          </div>-->
+<!--        </div>-->
+        <div class="col-6 p-3 col-xl-3"  *ngFor="let cus of contentCus">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" style="height: 200px" src="https://picsum.photos/200" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{cus.name}}</h5>
+              <p class="card-text">{{cus.desc}}</p>
+              <mat-icon color="primary" class="pointer"  (click)="goToProducts(cus.name)">info</mat-icon>
+              <mat-icon color="primary" class="pointer"  (click)="deleteCusineDialog(cus.id)">delete</mat-icon>
+            </div>
+          </div>
+        </div>
+      </div>
   </mat-card-content>
 </mat-card>

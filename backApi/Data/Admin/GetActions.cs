@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Threading.Tasks;
 using _.Models;
 using Microsoft.EntityFrameworkCore;
 using TempWeb.Data;
@@ -42,6 +43,24 @@ namespace _.Data.Admin
             var id = await _context.IngridientCategories.FirstOrDefaultAsync(t => t.name == name);
             
             return id;
+        }
+
+        public async Task<Cuisine> DeleteCusine(int id)
+        {
+            Cuisine cusine = await _context.Cuisines.Where(x => x.Id == id).FirstOrDefaultAsync();
+            
+            _context.Cuisines.Remove(cusine);
+            await _context.SaveChangesAsync();
+            return cusine;
+        }
+
+        public async Task<Product> DeleteProduct(int id)
+        {
+            Product product = await _context.Products.Where(x => x.Id == id).FirstOrDefaultAsync();
+            
+            _context.Products.Remove(product);
+            await _context.SaveChangesAsync();
+            return product;
         }
     }
 }

@@ -31,8 +31,39 @@ export class AdminService {
       username: username,
       role: role
     }).pipe(catchError(this.handleError))
-
   }
+
+  addCuisine(fd: FormData)
+  {
+    return this.http.post(DOMAIN + '/actions/addcusine', fd
+    ).pipe(catchError(this.handleError))
+  }
+
+  addProduct(fd: FormData)
+  {
+    return this.http.post(DOMAIN + '/actions/addproduct', fd
+    ).pipe(catchError(this.handleError))
+  }
+
+  addProductCategory(category: string)
+  {
+    return this.http.post(DOMAIN + '/actions/addproductcategory', {
+      name: category
+    }
+    ).pipe(catchError(this.handleError))
+  }
+
+
+  deleteCusine(id: number)
+  {
+    return this.http.put(DOMAIN + `/actions/deleteCusine/${id}`, {}).pipe(catchError(this.handleError))
+  }
+
+  deleteProduct(id: number)
+  {
+    return this.http.put(DOMAIN + `/actions/deleteProduct/${id}`, {}).pipe(catchError(this.handleError))
+  }
+
 
   handleError(error)
   {

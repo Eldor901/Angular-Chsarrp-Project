@@ -11,9 +11,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { BrowserModule } from '@angular/platform-browser';
 import { AdminRouting } from '../admin/admin-routing.module';
 import { MatCardModule } from '@angular/material/card';
+import { CreateProductComponent } from './pages/create-product/create-product.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { ProductsComponent } from './pages/products/products.component';
 
 @NgModule({
-  declarations: [MainPageComponent, VisitorComponent],
+  declarations: [MainPageComponent, VisitorComponent, CreateProductComponent, ProductsComponent],
   imports: [
     CommonModule,
     MatSidenavModule,
@@ -24,6 +27,7 @@ import { MatCardModule } from '@angular/material/card';
     VisitorRoutingModule,
     MatButtonModule,
     MatCardModule,
+    MatGridListModule,
   ],
 })
 export class VisitorModule {}

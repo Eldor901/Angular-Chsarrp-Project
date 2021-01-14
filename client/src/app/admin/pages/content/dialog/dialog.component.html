@@ -11,19 +11,22 @@
         <mat-icon matSuffix>list_alt</mat-icon>
         <mat-hint>French Restaurant</mat-hint>
       </mat-form-field>
-      <div>
+      <div class="row">
+        <div class="col-6">
         <label for="files" class="btn">
           Upload File
         </label>
-        <input id="files" style="visibility:hidden;" type="file" formControlName="file">
+          <input id="files" style="visibility:hidden;" type="file" formControlName="file" (change)="onFileSelected($event)">
+        </div>
+        <img class="col-6" [src]="imgURL" height="100" *ngIf="imgURL">
       </div>
       <mat-form-field class="example-full-width" class="form">
         <mat-label>Leave a comment</mat-label>
-        <textarea matInput placeholder="Ex. It makes me feel..." formControlName="desc"></textarea>
+        <textarea matInput style="height: 100px " placeholder="Ex. It makes me feel..." formControlName="desc"></textarea>
       </mat-form-field>
 </div>
 <div mat-dialog-actions class="actions">
   <button mat-button (click)="onNoClick()">No</button>
-  <button type="submit"  mat-button [disabled]="form.invalid">Yes</button>
+  <button type="submit"  mat-button [disabled]="form.invalid" [mat-dialog-close]="true">Yes</button>
 </div>
 </form>

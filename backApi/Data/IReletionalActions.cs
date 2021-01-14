@@ -6,8 +6,8 @@ namespace _.Data
 {
     public interface IReletionalActions
     {
-        Task<List<ProductCategory>> CuisineAllProductsInCategory(int cusineId);
-        Task<List<IngridientCategory>> ProductAllIngridentsInCategory(int productId);
+        Task<List<ProductCategory>> CuisineAllProductsInCategory(string cusineId);
+        Task<List<IngridientCategory>> ProductAllIngridentsInCategory(string productId);
         
         int RetId(int id);
     }

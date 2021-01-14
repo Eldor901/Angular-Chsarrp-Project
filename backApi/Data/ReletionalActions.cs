@@ -17,27 +17,23 @@ namespace _.Data
             _context = context;
         }
 
-        public async Task<List<ProductCategory>> CuisineAllProductsInCategory(int cusineId)
+        public async Task<List<ProductCategory>> CuisineAllProductsInCategory(string cusineId)
         {
             List<ProductCategory> productCategory = new List<ProductCategory>();
+
+            var id = await _context.Cuisines.FirstOrDefaultAsync(x => x.name == cusineId);
             
-            var ProductofCuisine = await _context.Products.Where(x => x.CuisineId == cusineId).ToListAsync();
+            var prod = await _context.ProductCategories.Include(b => b.Products).Where(x => x.Products.Any(i=> i.CuisineId == id.Id)).ToListAsync();
 
-            foreach (var cp in ProductofCuisine)
-            {
-                var products = await _context.ProductCategories.Where(x => x.Id == cp.Id).ToListAsync();
-                
-                productCategory.AddRange(products);
-            }
 
-            return productCategory;
+            return prod;
         }
 
-        public async Task<List<IngridientCategory>> ProductAllIngridentsInCategory(int productId)
+        public async Task<List<IngridientCategory>> ProductAllIngridentsInCategory(string productId)
         {
             List<IngridientCategory> ingridientCategory = new List<IngridientCategory>();
 
-            var IngridientOfProduct = await _context.Ingridients.Where(x => x.ProductId == productId).ToListAsync();
+            var IngridientOfProduct = await _context.Ingridients.Where(x => x.name == productId).ToListAsync();
             
             foreach (var Ip in IngridientOfProduct)
             {

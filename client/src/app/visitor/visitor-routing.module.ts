@@ -4,13 +4,19 @@ import { MainPageComponent } from './pages/main-page/main-page.component';
 import { VisitorComponent } from './visitor.component';
 import { AdminGuard } from '../admin.guard';
 import { VisitorGuard } from '../visitor.guard';
+import {CreateProductComponent} from './pages/create-product/create-product.component';
+import {ProductsComponent} from './pages/products/products.component';
 
 const routesVisitor: Routes = [
   {
     path: 'visitor',
     component: VisitorComponent,
     canActivate: [VisitorGuard],
-    children: [{ path: 'showcousine', component: MainPageComponent }],
+    children: [
+      { path: 'showcousine', component: MainPageComponent },
+      { path: 'createProduct', component: CreateProductComponent},
+      { path: 'products/:id', component: ProductsComponent},
+      ],
   },
 ];
 
