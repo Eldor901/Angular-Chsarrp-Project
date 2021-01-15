@@ -1,7 +1,7 @@
 <mat-card class="example-card">
   <mat-grid-list cols="1" rowHeight="100px">
     <mat-grid-tile>
-      <h1>Content of {{id}}  Products </h1>
+      <h1>Content of Products </h1>
     </mat-grid-tile>
   </mat-grid-list>
   <mat-card-content class="container">
@@ -11,7 +11,7 @@
         <div class="row  flex-nowrap">
           <div class="col-3 p-3" *ngFor="let prod of categories.products">
             <div class="card" style="width: 18rem;">
-              <img class="card-img-top" style="height: 200px" src="https://picsum.photos/200" alt="Card image cap">
+              <img class="card-img-top" style="height: 200px" [src]="prod.imgurl" alt="Card image cap">
               <div class="card-body">
                 <h3 class="card-title" >Title: {{prod.name}}</h3>
                 <p class="card-text">{{prod.price}} $</p>

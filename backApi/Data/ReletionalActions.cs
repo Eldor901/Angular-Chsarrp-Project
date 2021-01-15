@@ -17,11 +17,11 @@ namespace _.Data
             _context = context;
         }
 
-        public async Task<List<ProductCategory>> CuisineAllProductsInCategory(string cusineId)
+        public async Task<List<ProductCategory>> CuisineAllProductsInCategory(int cusineId)
         {
             List<ProductCategory> productCategory = new List<ProductCategory>();
 
-            var id = await _context.Cuisines.FirstOrDefaultAsync(x => x.name == cusineId);
+            var id = await _context.Cuisines.FirstOrDefaultAsync(x => x.Id == cusineId);
             
             var prod = await _context.ProductCategories.Include(b => b.Products).Where(x => x.Products.Any(i=> i.CuisineId == id.Id)).ToListAsync();
 

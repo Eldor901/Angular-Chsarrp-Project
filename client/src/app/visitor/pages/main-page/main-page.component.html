@@ -13,12 +13,12 @@
       <!--        </div>-->
       <div class="col-3 p-3 "  *ngFor="let cus of contentCus">
         <div class="card" style="width: 18rem;">
-          <img class="card-img-top" style="height: 200px" src="https://picsum.photos/200" alt="Card image cap">
-          <div class="card-body">
+          <img class="card-img-top" style="height: 200px" [src]="cus.imgurl" alt="Card image cap">
+          <div class="card-body" style="height: 200px">
             <h5 class="card-title">{{cus.name}}</h5>
             <p class="card-text">{{cus.desc}}</p>
-            <mat-icon color="primary" class="pointer"  (click)="goToProducts(cus.name)">info</mat-icon>
           </div>
+          <mat-icon  color="primary" class="pointer m-2"  (click)="goToProducts(cus.id)">info</mat-icon>
         </div>
       </div>
     </div>

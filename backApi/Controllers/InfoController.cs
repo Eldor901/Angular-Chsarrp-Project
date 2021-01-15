@@ -46,9 +46,8 @@ namespace _.Controllers
         }
 
         [HttpGet("AllCategoryProductsOfCuisine/{cusineId}")]
-        public async Task<IActionResult> getProductsCuisine(string cusineId)
+        public async Task<IActionResult> getProductsCuisine(int cusineId)
         {
-            
             var info =  await _reletionalActions.CuisineAllProductsInCategory(cusineId);
 
             var infoToReturn = _mapper.Map<IEnumerable<ProductCategoryDto>>(info);;

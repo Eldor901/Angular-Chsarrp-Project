@@ -1,0 +1,26 @@
+﻿version: '3'
+
+services:
+  db:
+    image: mysql
+    restart: always
+    container_name: picture_mysql
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=eldor901
+      - MYSQL_ROOT_PASSWORD=user
+      - MYSQL_DATABASE=order_dish_res
+  webapp:
+    image: mcr.microsoft.com/dotnet/core/samples:aspnetapp
+    depends_on:
+      - db
+    ports:
+      - 80
+      - 443
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=eldor901
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+    volumes:
+      - ~/.aspnet/https:/https:ro

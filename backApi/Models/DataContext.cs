@@ -17,7 +17,10 @@ namespace TempWeb.Data
         public DbSet<IngridientCategory> IngridientCategories  { get; set; }
 
 
-        public DataContext(DbContextOptions<DataContext> options) 
-            : base(options) { }
+        public DataContext(DbContextOptions<DataContext> options)
+            : base(options)
+        {
+            Database.EnsureCreated();
+        }
     }
 }
